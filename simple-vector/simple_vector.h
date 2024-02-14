@@ -27,7 +27,7 @@ public:
 
 
     SimpleVector(const SimpleVector &other) {
-        size_ = std::move(other.size_);
+        size_ = other.size_;
         capacity_ = other.size_ * 2;
         items_ = new Type[capacity_];
         std::copy(other.items_, other.items_ + other.size_, items_);
